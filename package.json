@@ -1,0 +1,11 @@
+{
+  "name": "wetube_v2",
+  "version": "1.0.0",
+  "description": "Cloning Review",
+  "main": "index.js",
+  "author": "Hoon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
