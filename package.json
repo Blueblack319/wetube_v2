@@ -6,6 +6,12 @@
   "author": "Hoon",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
     "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "babel-node init.js"
   }
 }
