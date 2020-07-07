@@ -1,15 +1,13 @@
 import express from "express";
 import routes from "../routes";
+import {
+  handleUsers,
+  handleUserDetail,
+  handleEditProfile,
+  handleChangePassword,
+} from "../controllers/userController";
 
 const userRouter = express.Router();
-
-const handleUsers = (req, res) => res.send("Users");
-
-const handleUserDetail = (req, res) => res.send("Detail");
-
-const handleEditProfile = (req, res) => res.send("Edit Profile");
-
-const handleChangePassword = (req, res) => res.send("Change Password");
 
 userRouter.get(routes.home, handleUsers);
 userRouter.get(routes.userDetail, handleUserDetail);

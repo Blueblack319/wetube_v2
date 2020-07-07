@@ -1,17 +1,13 @@
 import express from "express";
 import routes from "../routes";
+import { handleHome, handleSearch } from "../controllers/videoController";
+import {
+  handleJoin,
+  handleLogin,
+  handleLogout,
+} from "../controllers/userController";
 
 const globalRouter = express.Router();
-
-const handleHome = (req, res) => res.send("Home");
-
-const handleJoin = (req, res) => res.send("Join");
-
-const handleLogin = (req, res) => res.send("Login");
-
-const handleLogout = (req, res) => res.send("Logout");
-
-const handleSearch = (req, res) => res.send("Search");
 
 globalRouter.get(routes.home, handleHome);
 globalRouter.get(routes.join, handleJoin);
