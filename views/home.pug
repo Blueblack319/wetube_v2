@@ -1,4 +1,12 @@
 extends layouts/main
+extends mixins/videoBlock
 
 block content
-    h3 Home
+    each video in videos
+        +videoBlock({
+            videoFile: video.videoFile,
+            title: video.title,
+            views: video.views,
+            id: video.id,
+
+        })
