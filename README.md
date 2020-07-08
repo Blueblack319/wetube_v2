@@ -16,8 +16,8 @@ Cloning Review`
 
 ## Using id :
 
-- [ ] User Detail
-- [ ] Edit Profile
-- [ ] Change Password
-- [ ] Edit Video
+- [x] User Detail
+- [x] Edit Profile
+- [x] Change Password
+- [x] Edit Video
 - [ ] Delete Video
