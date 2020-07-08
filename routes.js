@@ -41,7 +41,13 @@ const routes = {
   upload: UPLOAD,
   editVideo: EDIT_VIDEO,
   deleteVideo: DELETE_VIDEO,
-  videoDetail: VIDEO_DETAIL,
+  videoDetail: (id) => {
+    if (id) {
+      return `/videos/${id}`;
+    } else {
+      return VIDEO_DETAIL;
+    }
+  },
 };
 
 export default routes;
