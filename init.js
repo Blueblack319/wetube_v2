@@ -1,9 +1,10 @@
-import app from "./app"
+import app from "./app";
+import "./db";
 
-const PORT = 3000
+const PORT = 3000;
 
 const handleListening = (req, res) => {
-    console.log(`listen on : https://${PORT}`)
-}
+  console.log(`✅ listen on : https://${PORT}`);
+};
 
-app.listen(PORT, handleListening)
+app.listen(PORT, handleListening);
