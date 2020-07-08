@@ -8,7 +8,7 @@ import "./models/Comments";
 const PORT = process.env.PORT || 3000;
 
 const handleListening = (req, res) => {
-  console.log(`✅ listen on : https://${PORT}`);
+  console.log(`✅ listening Port : ${PORT}`);
 };
 
 app.listen(PORT, handleListening);

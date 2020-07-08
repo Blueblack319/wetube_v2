@@ -4,12 +4,12 @@ block content
     .video-player
         video(src=`/video${video.fileUrl}`, controls="true")
     .video-info
-        a(href=routes.editVideo) Edit Video
+        a(href=routes.editVideo(video.id)) Edit Video
         h2.video-info__title #{video.title}
         span.video-info__views #{video.views}
         h3.video-info__description #{video.description}
     .video-comments
-        if video.comments === 1
+        if video.comment.lenght === 1
             span.video-comments 1 Comment
         else
-            span.video-comments #{video.comments} Comments
+            span.video-comments #{video.comment.length} Comments
