@@ -1,13 +1,35 @@
-export const users = (req, res) => res.render("users");
+import routes from "../routes";
 
-export const userDetail = (req, res) => res.render("userDetail");
+export const users = (req, res) => res.render("users", { pageTitle: "Users" });
 
-export const editProfile = (req, res) => res.render("editProfile");
+export const userDetail = (req, res) =>
+  res.render("userDetail", { pageTitle: "User Detail" });
 
-export const changePassword = (req, res) => res.render("changePassword");
+export const editProfile = (req, res) =>
+  res.render("editProfile", { pageTitle: "Edit Profile" });
 
-export const join = (req, res) => res.render("join");
+export const changePassword = (req, res) =>
+  res.render("changePassword", { pageTitle: "Change Password" });
 
-export const login = (req, res) => res.render("login");
+export const getJoin = (req, res) => res.render("join", { pageTitle: "Join" });
+export const postJoin = (req, res) => {
+  const {
+    body: { name, emial, password, password2 },
+  } = req;
+  if (password !== password2) {
+    res.status(400);
+    res.render("join", { pageTitle: "Join" });
+  } else {
+    // To Do : Register User and Login
+    res.redirect(routes.home);
+  }
+};
+
+export const getLogin = (req, res) =>
+  res.render("login", { pageTitle: "Log In" });
+export const postLogin = (req, res) => {
+  // To Do : Check password according to such email
+  res.redirect(routes.home);
+};
 
 export const logout = (req, res) => res.render("logout");
