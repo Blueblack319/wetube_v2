@@ -1,4 +1,14 @@
 extends layouts/main
 
 block content
-    h3 Video Detail
+    .video-player
+        video(src=`/video${video.fileUrl}`, controls="true")
+    .video-info
+        h2.video-info__title #{video.title}
+        span.video-info__views #{video.views}
+        h3.video-info__description #{video.description}
+    .video-comments
+        if video.comments === 1
+            span.video-comments 1 Comment
+        else
+            span.video-comments #{video.comments} Comments
