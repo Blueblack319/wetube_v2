@@ -11,6 +11,7 @@ export const home = async (req, res) => {
     res.render("home", { pageTitle: "Home", videos: [] });
   }
 };
+
 export const search = async (req, res) => {
   const {
     query: { term: searchingBy },
