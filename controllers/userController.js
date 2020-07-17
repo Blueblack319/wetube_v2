@@ -36,6 +36,10 @@ export const postJoin = async (req, res, next) => {
   }
 };
 
+export const githubLoginCallback = (accessToken, refreshToken, profile, cb) => {
+  console.log(accessToken, refreshToken, profile, cb);
+};
+
 export const getLogin = (req, res) =>
   res.render("login", { pageTitle: "Log In" });
 export const postLogin = passport.authenticate("local", {
