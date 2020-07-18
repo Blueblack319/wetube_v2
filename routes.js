@@ -65,8 +65,8 @@ const routes = {
       return VIDEO_DETAIL;
     }
   },
-  github = GH,
-  githubCallback = GH_CALLBACK
+  github: GH,
+  githubCallback: GH_CALLBACK,
 };
 
 export default routes;
